@@ -1,0 +1,96 @@
+<head>
+  <title>project-1</title>
+</head>
+
+<body>
+
+  <section>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Todos-Meteor</a>
+          </div>
+          <ul class="nav navbar-nav">
+           
+
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{>loginButtons}}</a></li>
+          
+          </ul>
+        </div>
+      </nav>
+
+
+
+  {{> todo}}
+
+  </section>
+</body>
+
+
+
+<template name="todo">
+
+
+  <div class="container animated fadeIn">
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Todo List App</h1>
+        <p class="lead">Manage your tasks easily.</p>
+      </div>
+    </div>
+  
+    {{> search }}
+
+  
+    <ul class="list-group">
+
+
+      {{#each todo}}
+      <li class="list-group-item d-flex justify-content-between align-items-center  {{#if checked}} checked {{/if}}" >
+        {{#if currentUser}}
+
+          <input type="checkbox" checked={{checked}} class="toggle-checked">
+        {{/if}}
+          <span class="text">
+            {{text}}
+
+         </span>
+
+         {{#if currentUser}}
+
+        <span class="badge badge-primary badge-pill delete-todo">x</span>
+                {{/if}}
+      </li>
+     {{/each}}
+
+
+    </ul>
+  
+  </div>
+
+
+
+</template>
+
+
+
+
+<template name="search">
+
+  
+  <div class="input-group">
+    {{#if currentUser}}
+<form  class="todo-form" >
+  <input type="text" name="text" placeholder="add new task for today ..." id="searchBox" class="form-control">
+
+</form>
+{{/if}}
+</div>
+</template>
+
+
+

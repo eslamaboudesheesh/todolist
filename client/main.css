@@ -1,0 +1,49 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+
+
+.jumbotron {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  text-align: center;
+  padding: 30px;
+}
+
+.badge-primary {
+  background-color: red;
+}
+
+span {
+  cursor: pointer;
+}
+
+span:hover {
+  background:grey;
+}
+
+.input-group {
+  position: relative;
+  border-collapse: separate;
+  display: grid;
+}
+
+li.checked {
+  color: #cccccc;
+}
+li.checked .text {
+  text-decoration: line-through;
+}
+
+
+
+#login-dropdown-list {
+  position: absolute;
+  top: 271%!important;
+  right: 19% !important;
+  left: auto!important;
+}
